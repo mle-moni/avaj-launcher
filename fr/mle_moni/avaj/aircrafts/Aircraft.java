@@ -38,7 +38,12 @@ public abstract class Aircraft {
 
 	protected void message(String message) {
 		Logger logger = Main.getLogger();
-		logger.logln(this.messageHeader() + message + "			POS = " + this.coordinates.toString());
+		String msg = this.messageHeader() + message;
+		boolean debug = false;
+		if (debug) {
+			msg += "			POS = " + this.coordinates.toString();
+		}
+		logger.logln(msg);
 	}
 
 	abstract protected HashMap<String, Coordinates> getActionMap();

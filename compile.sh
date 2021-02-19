@@ -18,5 +18,7 @@ echo "Done."
 if [[ $1 == "run" ]] ; then
 	echo "Runing simulation..."
 	java fr.mle_moni.avaj.towers.Main $2
-	echo "Done. Results are in ./simulation.txt"
+	if [[ $? = 0 ]] ; then 
+		echo "Done. Results are in ./simulation.txt"
+	fi
 fi
