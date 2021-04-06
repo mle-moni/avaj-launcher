@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 if [[ $1 == "clean" ]] ; then
 	echo "Deleting class files..."
