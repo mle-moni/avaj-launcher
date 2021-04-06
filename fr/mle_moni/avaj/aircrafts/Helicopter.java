@@ -46,16 +46,16 @@ public class Helicopter extends Aircraft implements Flyable {
 	@Override
 	protected String messageContent(String weather) {
 		switch (weather) {
-			case "SUN":
-				return "SUN Helicopter";
-			case "RAIN":
-				return "RAIN Helicopter";
-			case "FOG":
-				return "FOG Helicopter";
-			case "SNOW":
-				return "SNOW Helicopter";
-			default:
-				Main.exitWithError("weather " + weather + " is unknown");
+		case "SUN":
+			return "This is hot. (SUN / Helicopter)";
+		case "RAIN":
+			return "Oh no, it's raining, this is NOT pogchamp. (RAIN / Helicopter)";
+		case "FOG":
+			return "Oh no, it's foggy, this is really Sadge, no photographs for me :c (FOG / Helicopter)";
+		case "SNOW":
+			return "My rotor is going to freeze! (SNOW / Helicopter)";
+		default:
+			Main.exitWithError("weather " + weather + " is unknown");
 		}
 		return null;
 	}

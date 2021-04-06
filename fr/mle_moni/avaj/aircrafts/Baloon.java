@@ -46,16 +46,16 @@ public class Baloon extends Aircraft implements Flyable {
 	@Override
 	protected String messageContent(String weather) {
 		switch (weather) {
-			case "SUN":
-				return "SUN Baloon";
-			case "RAIN":
-				return "RAIN Baloon";
-			case "FOG":
-				return "FOG Baloon";
-			case "SNOW":
-				return "SNOW Baloon";
-			default:
-				Main.exitWithError("weather " + weather + " is unknown");
+		case "SUN":
+			return "Let's enjoy the good weather and take some pics. (SUN / Baloon)";
+		case "RAIN":
+			return "Damn you rain! You messed up my baloon. (RAIN / Baloon)";
+		case "FOG":
+			return "The fog is too dense, let's dance! (FOG / Baloon)";
+		case "SNOW":
+			return "It's snowing. We're gonna crash. (SNOW / Baloon)";
+		default:
+			Main.exitWithError("weather " + weather + " is unknown");
 		}
 		return null;
 	}

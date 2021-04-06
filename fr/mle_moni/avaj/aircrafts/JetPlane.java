@@ -46,16 +46,16 @@ public class JetPlane extends Aircraft implements Flyable {
 	@Override
 	protected String messageContent(String weather) {
 		switch (weather) {
-			case "SUN":
-				return "SUN JetPlane";
-			case "RAIN":
-				return "RAIN JetPlane";
-			case "FOG":
-				return "FOG JetPlane";
-			case "SNOW":
-				return "SNOW JetPlane";
-			default:
-				Main.exitWithError("weather " + weather + " is unknown");
+		case "SUN":
+			return "Where are my sunglasses? (SUN / JetPlane)";
+		case "RAIN":
+			return "It's raining. Better watch out for lightings. (RAIN / JetPlane)";
+		case "FOG":
+			return "I can't see shit, what's the protocol in this situation? (FOG / JetPlane)";
+		case "SNOW":
+			return "OMG! Winter is coming! (SNOW / JetPlane)";
+		default:
+			Main.exitWithError("weather " + weather + " is unknown");
 		}
 		return null;
 	}
